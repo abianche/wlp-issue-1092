@@ -14,8 +14,9 @@ const nextConfig: NextConfig = {
   webpack: (config: WebpackConfig) => {
     config.plugins = config.plugins || [];
     config.plugins.push(
-      new LicensePlugin()
-      // { includePackages: () => dependenciesPaths }
+      new LicensePlugin({
+        // includePackages: () => dependenciesPaths,
+      })
     );
 
     return config;
